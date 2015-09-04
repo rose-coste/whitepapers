@@ -1,8 +1,12 @@
-> State of the Union: Containers – Part 1
->
-> *An Educational Report and Market Analysis o Container Technologies*
->
-> Mike Metral Product Architect, Rackspace <mike.metral@rackspace.com>
+State of the Union: Containers – Part 1
+ 
+*An Educational Report and Market Analysis of Container Technologies*
+ 
+> Mike Metral 
+
+> Product Architect, Rackspace 
+
+> <mike.metral@rackspace.com>
 >
 > March 2015
 >
