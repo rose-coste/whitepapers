@@ -19,7 +19,7 @@ This report is intended to cover and educate on the various
 technologies emerging in and around the container space without deep
 diving too far into the intrinsic concepts and specifics of any one given
 technology. Specifically, this report should be seen as a means to get
-up-­‐to-­‐speed on what containers are as well as the architecture
+up to speed on what containers are as well as the architecture
 decisions that exist in adapting containers into both your
 infrastructure and toolbox. In addition, this report will highlight what container systems
 and utilities serve as the best solution depending on the use case, as
@@ -29,7 +29,7 @@ The container ecosystem is one of the fastest evolving trends in tech
 space that we’ve seen since the virtualized movement of the previous
 decade. As such, it should be made known that the findings and
 opinions expressed in this report are *extremely* time sensitive as a
-small time-­‐span of merely 6 months can and has rapidly shifted what
+small timespan of merely 6 months can and has rapidly shifted what
 the community has come to think and consider as a viable option.
 
 Lastly, a lot of the information detailed in this report has been a
@@ -51,7 +51,7 @@ In short, the virtualization we’ve all come to know and use today is
 possible because of the development and rise of the hypervisor.
 
 So why does everyone love containers and Docker? James Bottomley,
-Parallels‘ CTO of server virtualization and leading Linux kernel
+Parallels' CTO of server virtualization and leading Linux kernel
 developer, explained to me that VM hypervisors, such as Hyper-­‐V,
 KVM, and Xen, all are "based on emulating virtual hardware. That means
 they’re fat in terms of system requirements."
@@ -64,7 +64,7 @@ the useless 99.9% VM junk, leaving you with a small, neat capsule
 containing your application,” said Bottomley.
 
 Therefore, according to Bottomley, with a perfectly tuned container
-system, you can have as many as four-­‐to-­‐six times the number of
+system, you can have as many as four-to-six times the number of
 server application instances as you can using Xen or KVM VMs on the same
 hardware” (1).
 
@@ -75,7 +75,7 @@ Background
 ----------
 
 Container technology has been around for many years but its popularity
-really came to fruition through Docker: an open-­‐source project
+really came to fruition through Docker: an open-source project
 primarily focused on automating the deployment of apps within
 containers.
 
@@ -86,12 +86,12 @@ roles ranging from developers, devops, CIO’ and CTO’s to name a few.
 
 The success of the Docker project has even has gone as far to accumulate
 several millions of dollars in funding for Docker Inc. providing them
-with an estimated valuation of \$200-­‐400 million dollars at the time of
+with an estimated valuation of \$200-400 million dollars at the time of
 this report (2).
 
 Needless to say, Docker and the ecosystem being built around it,
 primarily the container orchestration and management tools, are providing
-a popular and open-­‐source means for companies of all sizes to adapt
+a popular and open-source means for companies of all sizes to adapt
 to the scalable, dynamic and agile technologies that similarly power the
 infrastructure and applications at tech giants such as Facebook, Google
 and Amazon.
@@ -132,7 +132,7 @@ other Docker support in the suite of Microsoft products at a future date (3).
 
 Circling back, in its simplest form, you can think of Docker as a wrapper
 for LXC. However, Docker provides much more functionality through a layer
-of abstraction and automation of LXC, as well as high-­‐level API and a
+of abstraction and automation of LXC, as well as high-level API and a
 booming ecosystem that is actively being built around it.
 
 Docker’s main features center on: providing ease of portability through
@@ -143,7 +143,7 @@ a base image for other containers.
 
 In addition to the core features of Docker, sharing Docker images through
 what is known as an image repository allows for the communal use of
-applications. These applications can be pre-­‐fabricated and uploaded by
+applications. These applications can be pre-fabricated and uploaded by
 others to facilitate their consumption. For example, one can easily
 download an run in a matter of seconds a Docker image on the latest MySQL
 Server, Redis, Apache, Golang Environment, OpenVPN Server etc. without
@@ -245,12 +245,12 @@ Modern Container Operating Systems
 With the success and popularity of containers made by Docker, modern
 operating systems have emerged embracing the container culture. These
 OS’ tend to provide the minimal functionality required to deploy
-applications along with self-­‐updating and healing properties which
+applications along with self-updating and healing properties which
 are different than standard OS’s today. In doing so, these types of OS
 have evolved the operating model users are accustomed to by moving
 away from deploying applications at the application layer to deploying
 applications inside containers operated by Docker. More simply put,
-applications can be thought of as self-­‐contained binaries that can be
+applications can be thought of as self-contained binaries that can be
 moved around environments accordingly based on your requirements of
 QOS, policy, affinity, replication etc.
 
@@ -259,16 +259,16 @@ CoreOS
 
 CoreOS is a new Linux distribution that has been architected to provide
 features needed to run modern infrastructure stacks via containers
-with a hands-­‐off
-approach to keeping the OS up-­‐to-­‐date much like the manner in which
+with a hands-off
+approach to keeping the OS up to date much like the manner in which
 browsers receive updates. Th strategies and architectures that influence
 CoreOS are similar to the mechanisms that allow companies like Google,
 Facebook and Twitter to run their services at scale with high resilience.
 
-In addition to the self-­‐updating nature of CoreOS, the real value lies in
+In addition to the self-updating nature of CoreOS, the real value lies in
 its flagship products:
 
--   **etcd** highly-­‐available key value store for shared configuration
+-   **etcd** highly-available key value store for shared configuration
     and service discovery.
 
 -   **fleet**: distributed init system that uses etcd as its manifest
@@ -282,8 +282,8 @@ its flagship products:
 Red Hat Project Atomic
 ----------------------
 
-Red Hat’s Project Atomic facilitates application-­‐centric IT architecture
-by providing a end-­‐to-­‐end solution for deploying containerized
+Red Hat’s Project Atomic facilitates application-centric IT architecture
+by providing a end-to-end solution for deploying containerized
 applications quickly and reliably, with atomic update and rollback for
 application and host alike.
 
@@ -295,7 +295,7 @@ based on CentOS will be available soon.
 
 Project Atomic hosts inherit the full features and advantages of their
 base distributions. This includes systemd, which provides
-container-­‐dependency management and fault recovery. It also includes
+container dependency management and fault recovery. It also includes
 journald, which provides secure aggregation and attribution of container
 logs (6).
 
@@ -324,7 +324,7 @@ Apache’s “Zookeeper”
 
 Zookeeper is a distributed configuration service synchronization service
 and naming registry for large distributed systems. ZooKeeper was a
-sub-­‐project of Hadoop, but is now a top-­‐level project in its own right.
+sub-project of Hadoop, but is now a top-level project in its own right.
 
 It holds Consistency+Partition Tolerance (CP) architecture, in the CAP
 theorem context, and uses the Zab protocol to coordinate changes across the
@@ -337,9 +337,9 @@ CoreOS’ “etcd”
 --------------
 
 Etcd is a distributed key/value store used for service discovery and shared
-configuration. I is aimed to be a simple implementation of the Raft
+configuration. It is aimed to be a simple implementation of the Raft
 consensus algorithm, particularly, with regards to agreements on
-election cycle and leader nomination, as well as manipulation to data.
+election cycle and leader nomination, as well as manipulation of data.
 
 I holds Consistency+Partition Tolerance (CP) architecture, in the CAP
 theorem context, and chooses consistency over availability, specifically
@@ -354,22 +354,22 @@ Hashicorp’s “Consul”
 Consul is a tool for service discovery and configuration. It is distributed,
 highly available, and extremely scalable. Key features include:
 
--   **Service Discovery** -­‐ Consul makes it simple for services to
+-   **Service Discovery:** Consul makes it simple for services to
     register themselves and to discover other services via DNS or HTTP
     interface. External services such as SaaS providers can be
     registered as well.
 
--   **Health Checking** -­‐ Health Checking enables Consul to quickly
+-   **Health Checking:** Health Checking enables Consul to quickly
     alert operators about any issues in a cluster. The integration with
     service discovery prevents routing traffic to unhealthy hosts and
     enables service level circuit breakers.
 
--   **Key/Value Storage** -­‐ flexible key/value store enables storing
+-   **Key/Value Storage:** Flexible key/value store enables storing
     dynamic configuration, feature flagging, coordination, leader
     election and more. The simple HTTP API makes it easy to use
     anywhere.
 
--   **Multi-­‐Datacenter** -­‐ Consul is built to be datacenter aware,
+-   **Multi-­‐Datacenter:** Consul is built to be datacenter aware,
     and can support any number of regions without complex
     configuration (9).
 
@@ -392,7 +392,7 @@ Comparison
 
 Note: Basic vs. Advanced Service Discovery revolves around the notion
 that in an advanced setting, the technology has more service
-monitoring and health-­‐checking capabilities.
+monitoring and health-checking capabilities.
 
 In terms of which technology to use:
 
@@ -440,7 +440,7 @@ complex stack across a cluster, to even instantiating a Docker container
 on said cluster, this does not mean that they should be in charge of
 full orchestration of containers.
 
-The technologies described below are the current front-­‐runners in the
+The technologies described below are the current front-runners in the
 industry with regards to service/resource scheduling.
 
 CoreOS’ “Fleet”
@@ -462,7 +462,7 @@ Apache’s “Mesos”
 Mesos is a distributed systems kernel. It is built using the same
 principles as the Linux kernel, only at a different level of abstraction.
 The Mesos kernel runs on every machine and provides applications (e.g.,
-Hadoop, Spark, Kafka, Elastic Search) with API’s for resource management
+Hadoop, Spark, Kafka, Elastic Search) with APIs for resource management
 and scheduling across entire datacenter and cloud environments (9).
 
 Mesos is a cluster manager that provides efficient isolation of
@@ -502,7 +502,7 @@ In terms of which technology to use:
     scheduling an health metrics. It’s also early in its development,
     and this could possibly accelerate with time.
 
--   Mesos is the front-­‐runner with some heavy names utilizing it today
+-   Mesos is the front-runner with some heavy names utilizing it today
     in their infrastructure. Also, Mesosphere, the company that is
     commercializing Mesos and is separate entity from Apache (the
     developer of Mesos) has currently started work on a Mesos
@@ -517,7 +517,7 @@ Container Cluster Orchestration Management
 Orchestrating and managing a cluster of Docker containers is an emerging
 trend that is not only very competitive with many companies, but one
 that is evolving at a rapid pace. Many options currently exist with
-various feature sets, and the race to be the front-­‐runner is in full
+various feature sets, and the race to be the front-runner is in full
 swing.
 
 Below is a list of the notable open source container orchestration engines
@@ -534,21 +534,21 @@ Compose, previously known as “Fig” prior to its acquisition, is a simple
 orchestration framework really aimed to allow the definition of fast,
 isolated development environment for Docker containers.
 
-Its sweet spot really lies in apps that revolve around a single-­‐purpose
+Its sweet spot really lies in apps that revolve around a single-purpose
 server that could easily scale out based on the notion that
 architectural complexity is not a requirement. Development environments,
-which tend to be an all-­‐in-­‐one baked in means of operation, obviously
+which tend to be an all-in-one baked in means of operation, obviously
 fits well into this requirement and thus makes Fig shine as a viable
 option.
 
 Based on use cases, something as simple as Fig may be all one needs.
 However, because this is a space where a solution such as Fig has both
 limited capabilities and overhead, teams may and have decided to hand
-roll micro-­‐solutions of this kind on their own for the sake of not taking
+roll micro-solutions of this kind on their own for the sake of not taking
 on extra overhead in their stack.
 
 Its reception in the community is notable, but the practicality of its
-usage and the lack of ability to create a long-­‐term vision around it
+usage and the lack of ability to create a long-term vision around it
 tend to minimize the actual legitimacy of adopting it as a container
 orchestration technology.
 
@@ -556,23 +556,23 @@ Prime Directive’s “Flynn”
 -------------------------
 
 Prime Directive labels Flynn as “the product that ops provides to
-developers. (11)” They believe that “ops should be a product team, not
+developers (11).” They believe that “ops should be a product team, not
 consultants” and that “Flynn is the single platform that ops can provide
 to developers to power production, testing, and development, freeing
 developers to focus.”
 
-Flynn is an open-­‐source PaaS built from pluggable components that you
+Flynn is an open-source PaaS built from pluggable components that you
 can mix and match however you want. Out of the box, it looks a lot like
-a Heroku that you could self-­‐host, but one that easily allows you to
+a Heroku that you could self-host, but one that easily allows you to
 replace the pieces you want with whatever you need.
 
-In regards to how Flynn differs from other PaaS’ like Heroku, Cloud
+In regards to how Flynn differs from other PaaS like Heroku, Cloud
 Foundry, Dei or Dokku, “the other PaaS technologies mainly focus on
 scaling a stateless app tier.
 
 They may run one or two persistent services for you, but for the most
 part you are on your own to figure that part out. Flynn is really trying
-to solve the state problems, which is pretty unique.” (12)
+to solve the state problems, which is pretty unique. (12)” 
 
 It is worth mentioning that with regards to stateful management,
 particularly in databases, right now they support Postgres, but their goal
@@ -584,22 +584,22 @@ Shopify, and CenturyLink.
 OpDemand’s “Deis”
 -----------------
 
-Deis is an open-­‐source PaaS that facilitates the deployment and
+Deis is an open-source PaaS that facilitates the deployment and
 management of apps. It is built on Docker and CoreOS (including etcd,
 fleet and the OS itself) to “provide lightweight PaaS with
-Heroku-­‐inspired workflow.” (13)
+Heroku-­‐inspired workflow (13).” 
 
 It can deploy an app or service that works in a Docker container and its
-structure mimics Heroku’s 12-­‐factor stateless methodology for how apps
+structure mimics Heroku’s 12-factor stateless methodology for how apps
 should be created and managed. Deis also leverages Heroku’s Buildpacks
-and comes with out-­‐of-­‐the-­‐ box support for Ruby, Python, Node.js,
+and comes with out-of-the-box support for Ruby, Python, Node.js,
 Java, Clojure, Scala, Play, PHP, Perl, Dart and Go.
 
 Much like Flynn, it too looks a lot like a Heroku clone that you could
-self-­‐host. However, Deis lacks persistent storage and state aware
+self-host. However, Deis lacks persistent storage and state aware
 support for use cases such as databases, and rather depends on some 3rd
 party cloud database solution. In this regard, Flynn seems to be ahead of
-Deis as the front-­‐runner in Heroku-­‐like projects.
+Deis as the front-runner in Heroku-like projects.
 
 Users of Deis include small to medium businesses and tech companies, but
 no major companies have announced their use of it.
@@ -607,7 +607,7 @@ no major companies have announced their use of it.
 ClusterHQ’s “Flocker”
 ---------------------
 
-Flocker is an open-­‐source data volume and multi-­‐host container
+Flocker is an open-source data volume and multi-host container
 manager that supports and works with Docker’s Compose (a.k.a Fig) file
 format syntax. Where Docker naturally shines with applications such as
 frontend or API servers, which utilize shared storage and are replicated
@@ -618,8 +618,8 @@ containers is still an incomplete feature that is missing in the
 community.
 
 The sweet spot with Flocker seems to be centered on its data management
-features and self-­‐proclaiming themselves as the leader in this area.
-However, though appearing as the front-­‐runner in datastore-­‐centric
+features and self-proclaiming themselves as the leader in this area.
+However, though appearing as the front-runner in datastore-centric
 models, full support of data in many use cases is still a work in progress
 and operations aren’t met without undergoing downtime of some capacity.
 
@@ -634,8 +634,8 @@ Cloudsoft’s “Clocker”
 ---------------------
 
 Clocker is an open source project that enables users to spin up Docker
-containers, without generating excess containers, in a cloud-­‐agnostic
-manner. The project is built on top of Apache Brooklyn, a multi-­‐cloud
+containers, without generating excess containers, in a cloud-agnostic
+manner. The project is built on top of Apache Brooklyn, a multi-cloud
 application, and management software.
 
 Some features of Clocker are:
@@ -717,21 +717,20 @@ Specifically Kubernetes:
     applications.
 
 -   Establishes robust declarative primitives for maintaining the
-    desired state requested by the user. Self-­‐healing mechanisms,
-    such as auto-­‐restarting, re-­‐scheduling,
+    desired state requested by the user. Self-healing mechanisms,
+    such as auto-restarting, re-scheduling,
     and replicating containers require active controllers, not
     just imperative orchestration.
 
 -   Is primarily targeted at applications comprised of multiple
-    containers, such as elastic, distributed micro-­‐services.
+    containers, such as elastic, distributed micro-services.
 
 -   Enables users to ask a cluster to run a set of containers.
     The system automatically chooses hosts to run those containers on
-    using a scheduler that is policy-­‐rich, topology-­‐aware and workload-­‐
-    specific.
+    using a scheduler that is policy-rich, topology-aware and workload-specific.
 
 Kubernetes builds upon a decade and a half of experience at Google running
-production workloads at scale, combined with best-­‐of-­‐breed ideas and
+production workloads at scale, combined with best-of-breed ideas and
 practices from the community. It is written in Golang and is lightweight,
 modular, portable and extensible (16).
 
@@ -797,15 +796,15 @@ framework by which developers can define a scheduling policy in a
 programmatic fashion – when leveraged together, they provide a
 datacenter with the ability to do both.
 
-Th main take-­‐away for Kubernetes is that right now it is best fit for
+Th main take-away for Kubernetes is that right now it is best fit for
 typical webapps and stateless applications and that it’s in
-pre-­‐production beta. However, Kubernetes is one of the most active and
+pre-production beta. However, Kubernetes is one of the most active and
 tracked projects on Github, so expect many changes in not only its
 functionality, stability and supported use cases, but also in the amount
 of technologies working on becoming highly interoperable with Kubernetes.
 
-One-­‐Offs
----------
+One-Offs
+--------
 
 Docker’s “Swarm”
 ----------------
@@ -914,7 +913,7 @@ Weave "makes the network fit the application, not the other way round,"
 as the company CEO puts it. With Weave, Docker containers are all part
 of a virtual network switch no matter where they're running. Services can
 be selectively exposed across the network to the outside world through
-firewalls and using encryption for wide-­‐area connections (20).
+firewalls and using encryption for wide-area connections (20).
 
 When using Weave, “applications use the network just as if the containers
 were all plugged into the same network switch, with no need to configure
@@ -1015,7 +1014,7 @@ space for a slew of technologies and tools to emerge, particularly at
 the orchestration level.
 
 Being somewhat of the Wild West right now in terms of competition does
-not mean that one tool is the be-­‐all and end-­‐all to enable a
+not mean that one tool is the be-all and end-all to enable a
 container offering.
 
 Viewing the ecosystem as a complimentary vertical stack rather than a
@@ -1027,7 +1026,7 @@ and services.
 
 Now that’s not to say that some tools aren’t competing with each other
 directly, or stepping into areas that blur the lines. Because this is
-such a fast-­‐paced movement, it is expected that the messaging,
+such a fast-paced movement, it is expected that the messaging,
 functionality and roadmap for all tools in this domain will constantly
 fluctuate.
 
