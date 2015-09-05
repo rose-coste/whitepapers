@@ -66,7 +66,7 @@ containing your application,” said Bottomley.
 Therefore, according to Bottomley, with a perfectly tuned container
 system, you can have as many as four-­‐to-­‐six times the number of
 server application instances as you can using Xen or KVM VMs on the same
-hardware” (Vaughn-­‐Nichols 2014)1.
+hardware” (1).
 
 Docker
 ======
@@ -87,7 +87,7 @@ roles ranging from developers, devops, CIO’ and CTO’s to name a few.
 The success of the Docker project has even has gone as far to accumulate
 several millions of dollars in funding for Docker Inc. providing them
 with an estimated valuation of \$200-­‐400 million dollars at the time of
-this report2.
+this report (2).
 
 Needless to say, Docker and the ecosystem being built around it,
 primarily the container orchestration and management tools, are providing
@@ -108,14 +108,6 @@ allows for true isolation on the host, but it comes with a heavy price in
 terms of the resources required to run it, not to mention the lack of
 portability of the VM across different virtualization platforms – think
 of the difficulty of trying to share a VM image across
-
-1
-[http://www.zdnet.com/article/what-­‐](http://www.zdnet.com/article/what-)is-­‐docker-­‐and-­‐why-­‐is-­‐it-­‐so-­‐darn-­‐popular/
-
-2
-[http://www.forbes.com/sites/benkepes/2014/09/16/the-­‐rumors-­‐](http://www.forbes.com/sites/benkepes/2014/09/16/the-)were-­‐true-­‐
-docker-­‐funding-­‐confirmed-­‐and-­‐40-­‐million-­‐enters-­‐the-­‐coffers/
-
 Amazon AWS, Rackspace Cloud, Microsoft Azure and VirtualBox. Now think
 about the size of the image in addendum to the image format, and how
 transferring it from one platform to the other doesn’t always prove to
@@ -136,7 +128,7 @@ that hypervisors abstract an entire machine; where as containers only
 abstract the physical host’s operating system kernel. Nevertheless, as of
 October 2014 Microsoft and Docker announced a partnership to invest on
 enabling the Windows Server container in the Docker engine, in addition to
-other Docker support in the suite of Microsoft products at a future date.3
+other Docker support in the suite of Microsoft products at a future date (3).
 
 Circling back, in its simplest form, you can think of Docker as a wrapper
 for LXC. However, Docker provides much more functionality through a layer
@@ -161,11 +153,6 @@ tool, let alone worry if it will function on your virtualization platform.
 These features are possible because Docker provides th ability to easily
 and quickly snapshot your application and its OS components into a
 common image that can be
-
-3
-[http://azure.microsoft.com/blog/2014/10/15/new-­‐](http://azure.microsoft.com/blog/2014/10/15/new-)windows-­‐server-­‐containers-­‐
-and-­‐azure-­‐support-­‐for-­‐docker/
-
 deployed on other hosts also running the Docker engine. This capability
 resonates in the technical community that is unfortunately familiar
 with a sea og different VM image formats and hypervisors that don’t
@@ -211,22 +198,16 @@ following concepts allow for that:
 
 -    **cgroups (Container Groups)**: Kernel feature which accounts for
      and isolates the resource usage (CPU, memory, disk, I/O, network,
-     etc.) of a collection o processes4
+     etc.) of a collection of processes (4).
 
 -    **Namespaces**: Kernel feature that allows for group of processes
-     to be separated such that they cannot see resources in other groups5
+     to be separated such that they cannot see resources in other groups (5).
 
 -    **Unionfs**: Filesystem service which allows for actions to be done
      to base image. By this method, layers are created and documented, such
      that each layer fully describes how to recreate a action. This
      strategy enables Docker's lightweight images, as only layer updates
      need to be propagated
-
-4 <http://en.wikipedia.org/wiki/Cgroups>
-
-5
- [http://en.wikipedia.org/wiki/Cgroups\#NAMESPACE-­‐ISOLATION](http://en.wikipedia.org/wiki/Cgroups#NAMESPACE-)
-
      from one environment to another, much like the code repository system
      git operates.
 
@@ -254,7 +235,7 @@ choose, the simplest answer is that there is no simple answer. All of
 these tools are not only young, but are also moving at a rapid pace
 and the scale and ease at which they clearly outline what they’re meant
 to aid with, let alone which technologies they respectfully tend to
-interoperate with, is still to be determined. It is the author’ opinion
+interoperate with, is still to be determined. It is the author’s opinion
 that throughout 2015, the community will make it known which
 technologies are meant to stick and which should be shelved.
 
@@ -316,7 +297,7 @@ Project Atomic hosts inherit the full features and advantages of their
 base distributions. This includes systemd, which provides
 container-­‐dependency management and fault recovery. It also includes
 journald, which provides secure aggregation and attribution of container
-logs.6
+logs (6).
 
 Service Registration and Discovery
 ==================================
@@ -331,9 +312,6 @@ In an active environment, containers are constantly being commissioned
 and decommissioned based on needs, standards, maintenance and failures.
 As you scale out your container architecture, keeping track of all the
 services in a static manner
-
-6 <http://www.projectatomic.io/docs/introduction/>
-
 simply won’t cut it, and a dynamic means of avoiding disturbance or
 disruption to your services is required.
 
@@ -368,7 +346,7 @@ theorem context, and chooses consistency over availability, specifically
 sequential consistency based on a quorum of nodes.
 
 Many projects use etcd, including: Google’s Kubernetes, Pivotal’s Cloud
-Foundry, Rackspace’s Mailgun, Apache Mesos & Mesosphere DCOS.7
+Foundry, Rackspace’s Mailgun, Apache Mesos & Mesosphere DCOS (7).
 
 Hashicorp’s “Consul”
 -------------------
@@ -393,7 +371,7 @@ highly available, and extremely scalable. Key features include:
 
 -   **Multi-­‐Datacenter** -­‐ Consul is built to be datacenter aware,
     and can support any number of regions without complex
-    configuration.8
+    configuration (9).
 
 It holds Consistency+Partition Tolerance (CP) architecture, in the CAP
 theorem context, and implements the Raft protocol.
@@ -460,7 +438,7 @@ sitting on top of your stack. Therefore, just because they can run any
 service or task from a simple hello world application to a much more
 complex stack across a cluster, to even instantiating a Docker container
 on said cluster, this does not mean that they should be in charge of
-full orchestration o containers.
+full orchestration of containers.
 
 The technologies described below are the current front-­‐runners in the
 industry with regards to service/resource scheduling.
@@ -485,7 +463,7 @@ Mesos is a distributed systems kernel. It is built using the same
 principles as the Linux kernel, only at a different level of abstraction.
 The Mesos kernel runs on every machine and provides applications (e.g.,
 Hadoop, Spark, Kafka, Elastic Search) with API’s for resource management
-and scheduling across entire datacenter and cloud environments.9
+and scheduling across entire datacenter and cloud environments (9).
 
 Mesos is a cluster manager that provides efficient isolation of
 resources and is truly all about facilitating different types of
@@ -514,8 +492,8 @@ Comparison
   > **CoreOS**   > **Fleet**    > **Monolithic**                                > **✓**                                                 **✓**                      > **✓**                    > **✓**
   > **Apache**   > **Mesos**    > **Two-level**      > **✓**                    > **✓**                      **✓**                                                 > **✓**                    
 
-> **Table 3 – Service/ Resource Scheduling & Management Functionality
-> Comparison10**
+> **Table 3 – Service / Resource Scheduling and Management Functionality
+> Comparison (10)**
 
 In terms of which technology to use:
 
@@ -578,7 +556,7 @@ Prime Directive’s “Flynn”
 -------------------------
 
 Prime Directive labels Flynn as “the product that ops provides to
-developers.”11 They believe that “ops should be a product team, not
+developers. (11)” They believe that “ops should be a product team, not
 consultants” and that “Flynn is the single platform that ops can provide
 to developers to power production, testing, and development, freeing
 developers to focus.”
@@ -594,7 +572,7 @@ scaling a stateless app tier.
 
 They may run one or two persistent services for you, but for the most
 part you are on your own to figure that part out. Flynn is really trying
-to solve the state problems, which is pretty unique.”12
+to solve the state problems, which is pretty unique.” (12)
 
 It is worth mentioning that with regards to stateful management,
 particularly in databases, right now they support Postgres, but their goal
@@ -609,7 +587,7 @@ OpDemand’s “Deis”
 Deis is an open-­‐source PaaS that facilitates the deployment and
 management of apps. It is built on Docker and CoreOS (including etcd,
 fleet and the OS itself) to “provide lightweight PaaS with
-Heroku-­‐inspired workflow.”13
+Heroku-­‐inspired workflow.” (13)
 
 It can deploy an app or service that works in a Docker container and its
 structure mimics Heroku’s 12-­‐factor stateless methodology for how apps
@@ -629,19 +607,12 @@ no major companies have announced their use of it.
 ClusterHQ’s “Flocker”
 ---------------------
 
-Flocker is a open-­‐source data volume and multi-­‐host container
+Flocker is an open-­‐source data volume and multi-­‐host container
 manager that supports and works with Docker’s Compose (a.k.a Fig) file
 format syntax. Where Docker naturally shines with applications such as
 frontend or API servers, which utilize shared storage and are replicated
 or made highly available in some capacity, Flocker’s intention is to
 offer the same portability but for applications with systems
-
-12
-[http://www.centurylinklabs.com/interviews/what-­‐](http://www.centurylinklabs.com/interviews/what-)is-­‐flynn-­‐an-­‐open-­‐source-­‐
-docker-­‐paas/
-
-13 <http://deis.io/overview/>
-
 such as databases and messaging/queuing systems as state management in
 containers is still an incomplete feature that is missing in the
 community.
@@ -692,10 +663,7 @@ Docker container, after which it can be treated like any virtual
 machine. Brooklyn receives sensor data from the app, every docker
 host, every docker container as well as every software making up the
 app and can effect changes in each of these; enabling Brooklyn to
-manage distribution of the app across the Docker Cloud. (Shenoy
-2014)14
-
-14 <http://www.infoq.com/news/2014/06/clocker>
+manage distribution of the app across the Docker Cloud. (14)
 
 In short, Brooklyn is a platform that monitors and manages Docker
 containers using a YAML configuration known as blueprints for its
@@ -715,7 +683,7 @@ scheduling Mesos frameworks, including Docker containers.
 
 Marathon is a *meta framework*: you can start other Mesos frameworks
 with it. It can launch anything that can be launched in a standard shell. In
-fact, you can even start other Marathon instances via Marathon.15
+fact, you can even start other Marathon instances via Marathon (15).
 Because it is a framework built on Mesos, it can be seen as a comparable
 model to Clocker which is itself a blueprint (analogously a framework)
 for Apache’s Brooklyn.
@@ -750,11 +718,8 @@ Specifically Kubernetes:
 
 -   Establishes robust declarative primitives for maintaining the
     desired state requested by the user. Self-­‐healing mechanisms,
-    such as auto-­‐restarting, re-­‐
-
-15 https://github.com/mesosphere/marathon
-
-    scheduling, and replicating containers require active controllers, not
+    such as auto-­‐restarting, re-­‐scheduling,
+    and replicating containers require active controllers, not
     just imperative orchestration.
 
 -   Is primarily targeted at applications comprised of multiple
@@ -768,7 +733,7 @@ Specifically Kubernetes:
 Kubernetes builds upon a decade and a half of experience at Google running
 production workloads at scale, combined with best-­‐of-­‐breed ideas and
 practices from the community. It is written in Golang and is lightweight,
-modular, portable and extensible.16
+modular, portable and extensible (16).
 
 Some of the concepts behind Kubernetes include:
 
@@ -786,7 +751,7 @@ Some of the concepts behind Kubernetes include:
 
 -   **Services:** a set of containers performing a common function with
     single, stable name and address for a set of pods – They act like a
-    basic load balancer.17
+    basic load balancer (17).
 
 Being one of the hottest, if not *the* hottest, technologies in the
 Docker ecosystem right now has forced many folks in the community to
@@ -807,13 +772,6 @@ applications run well on Mesos (Hadoop, Kafka, Spark) and it is nice
 because you can run them all on the same basic resource pool, along
 with your new age container packaged apps. It is somewhat more heavy
 weight than the
-
-16 https://github.com/GoogleCloudPlatform/kubernetes
-
-17
-[http://stackoverflow.com/questions/26705201/whats-­‐](http://stackoverflow.com/questions/26705201/whats-)the-­‐difference-­‐between-­‐
-apaches-­‐mesos-­‐and-­‐googles-­‐kubernetes
-
 Kubernetes project, but is getting easier and easier to manage thanks
 to the work of folks like Mesosphere.
 
@@ -823,21 +781,21 @@ Kubernetes API. So it will be a gateway to getting more capabilities
 for your Kubernetes app (high availability master, more advanced
 scheduling semantics, ability to scale to a very large number of
 nodes) if you need them, and is well suited to run production
-workloads. (Google, 2014)
+workloads.
 
 Lastly, [some say] Kubernetes and Mesos [can be] a match made in heaven.
 Kubernetes enables the Pod, along with Labels for service discovery,
 load-­‐balancing, and replication control. Mesos provides the
 fine-­‐grained resource allocations for pods across nodes in a cluster,
 and facilitates resource sharing among Kubernetes and other frameworks
-running on the same cluster.18 However, Mesos can easily be replaced by
-OpenStack and if you’v bought into Openstack, then the dependency and
+running on the same cluster (18). However, Mesos can easily be replaced by
+OpenStack and if you’ve bought into Openstack, then the dependency and
 usage of Meso can be elimated. To get back to the comparison,
 Kubernetes is an opinionated declarative model on how to address
 microservices, and Mesos is the layer that provides an imperative
 framework by which developers can define a scheduling policy in a
-programmatic fashion – when leveraged together, they provide
-data-­‐center with the ability to d both.
+programmatic fashion – when leveraged together, they provide a
+datacenter with the ability to do both.
 
 Th main take-­‐away for Kubernetes is that right now it is best fit for
 typical webapps and stateless applications and that it’s in
@@ -846,8 +804,8 @@ tracked projects on Github, so expect many changes in not only its
 functionality, stability and supported use cases, but also in the amount
 of technologies working on becoming highly interoperable with Kubernetes.
 
-One-­‐Off’s
-----------
+One-­‐Offs
+---------
 
 Docker’s “Swarm”
 ----------------
@@ -865,11 +823,7 @@ Swarm is designed to provide a smooth Docker deployment workflow,
 working with some existing container workflow frameworks such as Deis,
 but flexible enough to yield to "heavyweight" deployment and resource
 management such as Mesos. It is said to be a very simple add-­‐on to
-Docker. It currently does not provid all the
-
-18
-https://github.com/mesosphere/kubernetes-­‐mesos/blob/master/README.md
-
+Docker. It currently does not provide all the
 features to say something of the likes of Kubernetes and its usage and
 place in the ecosystem is still to be determined.
 
@@ -946,10 +900,7 @@ Specialized Offering
 >
 > **Figure 2 -­‐ Venn Diagram of Container Orchestrator & Managers**
 
-19 Gabriel Monroy -­‐
-https://pbs.twimg.com/media/B33GFtNCUAE-­‐vEX.png:large
-
-> **Current Recommendation:** Kubernetes
+**Current Recommendation:** Kubernetes
 
 Miscellaneous
 =============
@@ -963,7 +914,7 @@ Weave "makes the network fit the application, not the other way round,"
 as the company CEO puts it. With Weave, Docker containers are all part
 of a virtual network switch no matter where they're running. Services can
 be selectively exposed across the network to the outside world through
-firewalls and using encryption for wide-­‐area connections20.
+firewalls and using encryption for wide-­‐area connections (20).
 
 When using Weave, “applications use the network just as if the containers
 were all plugged into the same network switch, with no need to configure
@@ -971,11 +922,11 @@ port mappings, links, etc. Services provided by application containers
 on the weave network can be made accessible to the outside world,
 regardless of where those containers are running. Similarly, existing
 internal systems can be exposed to application containers irrespective of
-their location.21”
+their location (21).”
 
 Alexis Richardson, CEO, stated that "weave establishes per application
 Layer 2 networks for containers across hosts, even across cloud providers
-and other seemingly complex cases with minimum fuss22." Add to the fact
+and other seemingly complex cases with minimum fuss (22)." Add to the fact
 that they just raised
 \$5M in Series A, and it makes a compelling argument to considerably
 evaluate Weave as viable option.
@@ -994,16 +945,6 @@ etcd to serve as the key/value store for the networking configuration and
 state management. Though it was originally intended for Kubernetes, it has
 evolved into a generic overlay.
 
-20
-[http://www.infoworld.com/article/2835222/application-­‐](http://www.infoworld.com/article/2835222/application-)virtualization/5-­‐ways-­‐
-docker-­‐is-­‐fixing-­‐its-­‐networking-­‐woes.html
-
-21 https://github.com/zettio/weave
-
-22
-[http://www.eweek.com/cloud/weaveworks-­‐](http://www.eweek.com/cloud/weaveworks-)raises-­‐5-­‐million-­‐for-­‐docker-­‐
-container-­‐networking.html
-
 Flannel is still in its early stages and development is very much in
 flux and somewhat happens in spurts. It should be perceived as
 experimental but don’t disregard Flannel’s presence in the market, as
@@ -1017,7 +958,7 @@ system (such as OpenStack) to enable secure IP communication between
 virtual machines. As VMs are created or destroyed, their IP addresses are
 advertised to the rest of the network and they are able to send/receive data
 over IP just as they would with the native networking implementation – but with
-higher security, scalability and performance.”23
+higher security, scalability and performance (23).”
 
 In late 2014, the team managed to create a prototype of the Calico stack
 that runs as Docker containers, in addition to a plugin, that informs it
@@ -1034,7 +975,7 @@ community.
 
 Socketplane’s concept is to bring Open vSwitch to th Docker host so that one can
 “have a container that’s going to be able to manage the data path and
-also manage either overlays o underlays.24”
+also manage either overlays or underlays (24).”
 
 However, if one were to look for an actual project to evaluate or even
 their webpage, you’ll be met with neither as Socketplane is still very
@@ -1048,17 +989,7 @@ It is expected that a product is going to be made available in early
 2015, so with both the concept and the team behind it, this could evolve
 into a sound and promising technology. It has recently been made public
 that SocketPlane was purchased by Docker Inc and they plan to natively
-integrate with the Docker Inc portfolio.25
-
-23
-[http://www.projectcalico.org/about-­‐](http://www.projectcalico.org/about-)calico/
-
-24
-[https://www.sdxcentral.com/articles/news/madhu-­‐](http://www.sdxcentral.com/articles/news/madhu-)venugopal-­‐brent-­‐salisbury-­‐
-opendaylight-­‐starts-­‐open-­‐shop-­‐docker-­‐startup/2014/10/
-
-25
-[http://thenewstack.io/docker-­‐](http://thenewstack.io/docker-)acquires-­‐sdn-­‐technology-­‐startup-­‐socketplane-­‐io/
+integrate with the Docker Inc portfolio (25).
 
 ### Comparison
 
@@ -1104,7 +1035,7 @@ It is strongly recommended that one should closely track, survey and
 implement the tools accordingly, based not only on the requirements you
 would need for you container offering, but more importantly, the
 popularity of the tool and its reception in the strong community that
-serves as its drivin force.
+serves as its driving force.
 
 Credits
 =======
@@ -1115,3 +1046,63 @@ document:
 -   Hugh Blemings – Rackspace
 
 -   James Thorne – Rackspace
+
+References
+==========
+
+1 <http://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/>
+
+2 <http://www.forbes.com/sites/benkepes/2014/09/16/the-rumors-were‐true-
+docker-funding-confirmed-and-40-million-enters-the-coffers/>
+
+3 <http://azure.microsoft.com/blog/2014/10/15/new-windows-server-containers-
+and-azure-support-for-docker/>
+
+4 <http://en.wikipedia.org/wiki/Cgroups>
+
+5 <http://en.wikipedia.org/wiki/Cgroups#NAMESPACE-ISOLATION>
+
+6 <http://www.projectatomic.io/docs/introduction/>
+
+7 <https://coreos.com/blog/etcd-2.0-release-first-major-stable-release/>
+
+8 <https://github.com/hashicorp/consul>
+
+9 <http://mesos.apache.org/>
+
+10 <http://gabrtv.github.io/deis-qconsf-2014/#/22>
+
+11 <https://flynn.io/>
+
+12 <http://www.centurylinklabs.com/interviews/what-is-flynn-an-open-source-
+docker-paas/>
+
+13 <http://deis.io/overview/>
+
+14 <http://www.infoq.com/news/2014/06/clocker>
+
+15 <https://github.com/mesosphere/marathon>
+
+16 <https://github.com/GoogleCloudPlatform/kubernetes>
+
+17 <http://stackoverflow.com/questions/26705201/whats-the-difference-between-
+apaches-mesos-and-googles-kubernetes>
+
+18 <https://github.com/mesosphere/kubernetes-mesos/blob/master/README.md>
+
+19 <https://pbs.twimg.com/media/B33GFtNCUAE-vEX.png:large>
+
+20 <http://www.infoworld.com/article/2835222/application-virtualization/5-ways-
+docker-is-fixing-its-­networking-woes.html>
+
+21 <https://github.com/zettio/weave>
+
+22 <http://www.eweek.com/cloud/weaveworks-raises-5-million-for-docker-
+container-networking.html>
+
+23 <http://www.projectcalico.org/about-calico/>
+
+24 <http://www.sdxcentral.com/articles/news/madhu-venugopal-brent-salisbury-
+opendaylight-starts-open-shop-docker-startup/2014/10/>
+
+25 <http://thenewstack.io/docker-acquires-sdn-technology-startup-socketplane-io/>
