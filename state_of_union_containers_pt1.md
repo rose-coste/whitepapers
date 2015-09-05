@@ -52,7 +52,7 @@ possible because of the development and rise of the hypervisor.
 
 So why does everyone love containers and Docker? James Bottomley,
 Parallels' CTO of server virtualization and leading Linux kernel
-developer, explained to me that VM hypervisors, such as Hyper-­‐V,
+developer, explained to me that VM hypervisors, such as Hyper-V,
 KVM, and Xen, all are "based on emulating virtual hardware. That means
 they’re fat in terms of system requirements."
 
