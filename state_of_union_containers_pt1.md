@@ -382,11 +382,11 @@ search performed.
 Comparison
 ----------
 
-  > ***Org***       > ***Tool***      > ***Client /* *Server* *Arch***   > ***Primitive* *Key/Value* *Store***   > ***Basic* *Service* *Discovery***   > ***Adv.* *Service* *Discovery***   > ***Consistency***   > ***Language***
-  ----------------- ----------------- ---------------------------------- --------------------------------------- ------------------------------------- ------------------------------------ --------------------- ------------------
-  > **Apache**      > **Zookeeper**   **✓**                              > **✓**                                 > **✓**                                                                    > **✓**               > Java
-  > **Hashicorp**   > **Consul**      **✓**                              > **✓**                                                                       > **✓**                              > **✓**               > Go
-  > **CoreOS**      > **Etcd**        **✓**                              > **✓**                                 > **✓**                                                                    > **✓**               > Go
+| Org       | Tool      | Client/Server  Architecture | Primitive Key/Value Store | Basic  Service Discovery | Advanced Service Discovery | Consistency | Language |
+|-----------|-----------|-----------------------------|---------------------------|--------------------------|----------------------------|-------------|----------|
+| Apache    | Zookeeper |              ✓              |             ✓             |             ✓            |                            |      ✓      | Java     |
+| Hashicorp | Consul    |              ✓              |             ✓             |                          |              ✓             |      ✓      | Go       |
+| CoreOS    | Etcd      |              ✓              |             ✓             |             ✓            |                            |      ✓      | Go       |
 
 **Table 1 -­‐ Service Registration & Discovery Comparison**
 
