@@ -822,49 +822,30 @@ place in the ecosystem is still to be determined.
 Comparison
 ----------
 
-  ***Org***               ***Tool***         > ***1 Host* *(nano)***   > ***10s of Hosts* *(micro)***   > ***100s of Hosts* *(medium)***   > ***1000s of* *Hosts (large)***
-  ----------------------- ------------------ ------------------------- -------------------------------- ---------------------------------- ----------------------------------
-  > **Docker**            > **Compose**      > **✓**                                                                                       
-  > **Prime Directive**   **Flynn**                                    > **✓**                                                             
-  > **OpDemand**          **Deis**                                     > **✓**                                                             
-  > **ClusterHQ**         > **Flocker**                                > **✓**                                                             
-  > **Cloudsoft**         > **Clocker**                                                                 > **✓**                            
-  > **Mesosphere**        > **Marathon**                                                                                                   > **✓**
-  > **Google**            > **Kubernetes**                                                                                                 > **✓**
+| Org             | Tool       | One  Host (nano) | Up to  Tens of Hosts (micro) | Up to  Hundreds of Hosts (medium) | Up to  Thousands of Hosts (large) |
+|-----------------|------------|------------------|------------------------------|-----------------------------------|-----------------------------------|
+| Docker          | Compose    |         ✓        |                              |                                   |                                   |
+| Prime Directive | Flynn      |                  |               ✓              |                                   |                                   |
+| OpDemand        | Deis       |                  |               ✓              |                                   |                                   |
+| ClusterHQ       | Flocker    |                  |               ✓              |                                   |                                   |
+| CloudSoft       | Clocker    |                  |                              |                 ✓                 |                                   |
+| Mesosphere      | Marathon   |                  |                              |                                   |                 ✓                 |
+| Google          | Kubernetes |                  |                              |                                   |                 ✓                 |
 
-> **Table 4 -­‐ Size Comparison of Container Orchestrators & Managers**
+**Table 4 -‐ Size Comparison of Container Orchestrators & Managers**
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  > ***Org***             > ***Tool***       > ***Cluster* *State* *Management***   > ***Monitor***       > ***Deploy* *Spec***            > ***Allows* *Docker* *Dependency***   > ***Deploy* *Method***   > ***Language***
-                                                                                    >                                                      >                                                                
-                                                                                    > ***&* *Healing***                                    > ***& Arch.* *Mapping***                                        
-  ----------------------- ------------------ -------------------------------------- --------------------- -------------------------------- -------------------------------------- ------------------------- ------------------
-  > **Docker**            > **Compose**                                                                   > Dockerfile                     > **✓**                                > CLI                     > Python
-                                                                                                          >                                                                                                 
-                                                                                                          > + YAML                                                                                          
-                                                                                                          >                                                                                                 
-                                                                                                          > manifest                                                                                        
+| Org             | Tool       | Cluster State Management | Monitoring &  Healing | Deploy Spec                                 | Allows Docker Dependency & Architectural Mapping | Deployment Method | Language |
+|-----------------|------------|--------------------------|-----------------------|---------------------------------------------|--------------------------------------------------|-------------------|----------|
+| Docker          | Compose    |                          |                       | Dockerfile + YAML manifest                  |                         ✓                        | CLI               | Python   |
+| Prime Directive | Flynn      |                          |                       | Procfile,  Heroku Buildpack                 |                                                  | git push          | Go       |
+| OpDemand        | Deis       |                          |                       | Dockerfile,  Heroku Buildpack               |                                                  | git push          | Go       |
+| ClusterHQ       | Flocker    |             ✓            |                       | Dockerfile + YAML manifest                  |                         ✓                        | CLI               | Python   |
+| CloudSoft       | Clocker    |             ✓            |           ✓           | Apache Brooklyn YAML blueprint + Dockerfile |                         ✓                        | API / Web         | Java     |
+| Mesosphere      | Marathon   |             ✓            |           ✓           | JSON                                        |                         ✓                        | API / CLI         | C++      |
+| Google          | Kubernetes |             ✓            |           ✓           | YAML / JSON                                 |                         ✓                        | API / CLI         |          |
 
-  > **Prime Directive**   > **Flynn**                                                                     > Procfile, Heroku Buildpack                                            > git push                > Go
 
-  > **OpDemand**          > **Deis**                                                                      > Dockerfile, Heroku Buildpack                                          > git push                > Go
-
-  > **ClusterHQ**         > **Flocker**      **✓**                                                        > Dockerfile                     > **✓**                                > CLI                     > Python
-                                                                                                          >                                                                                                 
-                                                                                                          > + YAML                                                                                          
-                                                                                                          >                                                                                                 
-                                                                                                          > manifest                                                                                        
-
-  > **Cloudsoft**         > **Clocker**      **✓**                                  > **✓**               > Apache Brooklyn YAML           > **✓**                                > API /                   > Java
-                                                                                                          >                                                                       >                         
-                                                                                                          > Blueprint + Dockerfile                                                > Web                     
-
-  > **Mesosphere**        > **Marathon**     **✓**                                  > **✓**               > JSON                           > **✓**                                > API / CLI               > C++
-
-  > **Google**            > **Kubernetes**   **✓**                                  > **✓**               > YAML / JSON                    > **✓**                                > API / CLI               > Go
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Table 5 -­‐ Functionality Comparison of Container Orchestrators &
+**Table 5 -­‐ Functionality Comparison of Container Orchestrators and 
 Managers**
 
 ![](media/image1.jpeg)
