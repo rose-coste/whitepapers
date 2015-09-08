@@ -474,26 +474,19 @@ are active users and advocates of Mesos.
 
 Comparison
 ----------
+| Org    | Tool  | Req. Supplied Membership | Basic Task Orchestration | Advanced Task Orchestration | Up to  Hundreds of Hosts | Up to  Thousands of Hosts | Language |
+|--------|-------|--------------------------|--------------------------|-----------------------------|--------------------------|---------------------------|----------|
+| CoreOS | Fleet |             ✓            |             ✓            |                             |             ✓            |                           | Go       |
+| Apache | Mesos |             ✓            |             ✓            |              ✓              |                          |             ✓             | C++      |
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  > ***Org***    > ***Tool***   > ***Req.***                  > ***Basic Task* *Orchestration***   > ***Adv. Task* *Orchestration***   > ***10-100s***    > **1000s of *Hosts***   > **Language**
-                                >                                                                                                      >                                           
-                                > ***Supplied* Membership**                                                                            > ***of Hosts***                            
-  -------------- -------------- ----------------------------- ------------------------------------ ----------------------------------- ------------------ ------------------------ ----------------
-  > **CoreOS**   > **Fleet**    > **✓**                       **✓**                                                                    > **✓**                                     > Go
+**Table 2 -­‐ Service/Resource Scheduling & Management Comparison**
 
-  > **Apache**   > **Mesos**    > **✓**                                                            **✓**                                                  > **✓**                  > C++
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Org    | Tool  | Architecture | Resource Aware | Host Constraints | Host Balancing | Group Affinity | Anti- Affinity | Global Scheduling |
+|--------|-------|--------------|----------------|------------------|----------------|----------------|----------------|-------------------|
+| CoreOS | Fleet | Monolithic   |                |         ✓        |                |        ✓       |        ✓       |         ✓         |
+| Apache | Mesos | Two-level    |        ✓       |         ✓        |        ✓       |                |        ✓       |                   |
 
-> **Table 2 -­‐ Service/Resource Scheduling & Management Comparison**
-
-  > ***Org***    > ***Tool***   > **Architecture**   > ***Resource* *Aware***   > ***Host* *Constraints***   > ***Host* *Balancing***   > ***Group* *Affinity***   > ***Anti-* *Affinity***   > ***Global* *Scheduling***
-  -------------- -------------- -------------------- -------------------------- ---------------------------- -------------------------- -------------------------- -------------------------- -----------------------------
-  > **CoreOS**   > **Fleet**    > **Monolithic**                                > **✓**                                                 **✓**                      > **✓**                    > **✓**
-  > **Apache**   > **Mesos**    > **Two-level**      > **✓**                    > **✓**                      **✓**                                                 > **✓**                    
-
-> **Table 3 – Service / Resource Scheduling and Management Functionality
-> Comparison (10)**
+**Table 3 – Service / Resource Scheduling and Management Functionality Comparison (10)**
 
 In terms of which technology to use:
 
