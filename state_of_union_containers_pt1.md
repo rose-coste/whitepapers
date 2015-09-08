@@ -848,30 +848,15 @@ Comparison
 **Table 5 -­‐ Functionality Comparison of Container Orchestrators and 
 Managers**
 
-![](media/image1.jpeg)
+![Strata of the container ecosystem](images/container-ecosystem-layers.jpg)
 
-**Figure 1 -­‐ Strata of Container Ecosystem19 (Note: OpenStack can
-also be options at layers 2 & 5)**
+**Figure 1 -­‐ Strata of Container Ecosystem (19)**
+(Note: OpenStack can also be options at layers 2 & 5)
 
-*Traditional PaaS* *Container Orchestration*
 
-Deis Fig
+![Deploy and manage code as app in PaaS](images/container-paas-code-as-app.jpg)
 
-Kubernetes Clocker Marathon
-
-Flynn Flocker
-
-Specialized Offering
-
-(Datastore, Stateful, etc.)
-
--   **PaaS:** Deploy & Manage Code as App
-
--   **Orchestration:** Logical Infrastructure
-
-> **\* Specialized Offering:** Targeted Solution
->
-> **Figure 2 -­‐ Venn Diagram of Container Orchestrator & Managers**
+**Figure 2 -­‐ Venn Diagram of Container Orchestrator and Managers**
 
 **Current Recommendation:** Kubernetes
 
