@@ -10,8 +10,6 @@ State of the Union: Containers – Part 1
 
 -> March 2015 <-
 
-> Table of Contents
-
 Introduction
 ============
 
