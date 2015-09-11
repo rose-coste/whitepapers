@@ -8,7 +8,7 @@ State of the Union: Containers – Part 1
 
 -> <mike.metral@rackspace.com> <-
 
--> March 2015 <-
+-> September 2015 <-
 
 Introduction
 ============
